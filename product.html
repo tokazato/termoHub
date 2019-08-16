@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>პროდუქცია</title>
 </head>
@@ -83,18 +84,19 @@
     <div class="product">
         <div class="product-title">
             <h3>კატეგორიები</h3>
-            <a href="#"><p>სამშენებლო მასალები</p></a>
-            <a href="#"><p>მოსაპირკეთებელი ბეტონები</p></a>
-            <a href="#"><p>საახაწლო ნათურები</p></a>
+            <a class="optionFacing" href="#!"><p>მოსაპირკეთებელი მასალა</p></a>
+            <a class="optionBuilding" href="#!"><p>სამშენებლო მასალები</p></a>
+            <a class="optionNewYearLamp" href="#!"><p>საახაწლო ნათურები</p></a>
         </div>
         <select class="product-select">
             <option selected hidden>კატეგორიები</option>
-            <option>სამშენებლო მასალები</option>
-            <option>მოსაპირკეთებელი ბეტონები</option>
-            <option>საახაწლო ნათურები</option>
+            <option class="optionFacing" >მოსაპირკეთებელი მასალა</option>
+            <option class="optionBuilding" >სამშენებლო მასალები</option>
+            <option class="optionNewYearLamp">საახაწლო ნათურები</option>
         </select>
-        <section class="product-grid">
-            <a href="inproduct.html">
+        <div class="productBox">
+        <section id="product" class="product-grid">
+            <!-- <a href="inproduct.html">
                 <div>
                     <img src="media/img/Image 10.png" alt="">
                     <span class="line"></span>
@@ -156,16 +158,18 @@
                     <span class="line"></span>
                     <h4>მოსაპირკეთებელი მასალა</h4>
                 </div>
-            </a>
-            <div class="pagenation">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a class="active" href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&raquo;</a>
-            </div>
+            </a> -->
         </section>
+        <div class="pagenation">
+                <a class="prevPage" href="#!">&laquo;</a>
+                <a class="pageNumber active" href="#!">1</a>
+                <a class="pageNumber" href="#!">2</a>
+                <a class="pageNumber" href="#!">3</a>
+                <a class="nextPage" href="#!">&raquo;</a>
+            </div>
     </div>
+    </div>
+    
     <footer>
             <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.3425027509734!2d44.785498414810334!3d41.756272781009336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446d7e289459cf%3A0x359947bd9c906eb3!2zR3VyYW1pc2h2aWxpIEF2ZSwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1559831705541!5m2!1ska!2sge" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
              <div class="address">

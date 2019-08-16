@@ -82,6 +82,23 @@
     opacity: 1;
 }
 }
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
 * {
     margin: 0;
     list-style: none;
@@ -374,11 +391,21 @@ ul li:hover .down-ul {
     font-family: firago-medium;
     color: gray;
 }
+.sliderBox {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
 .clients {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 78px;
+    transition: 0.9s ease;
 }
 .clients h1 {
     font-size: 30px;
@@ -399,10 +426,13 @@ ul li:hover .down-ul {
     opacity: 0.1;
 }
 .clients-list {
+    position: absolute;
+    left: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     align-items: center;
     width: 100%;
+    transition: 0.9s ease;
 }
 .clients-list img {
     width: 162px;
@@ -422,7 +452,6 @@ ul li:hover .down-ul {
     border: 1px solid #E1E1E1;
     margin: 0px 5px 24px 5px;
     padding: 30px 60px;
-    width: calc(100% / 4);
 }
 .clients-arrow {
     padding: 8px 12px;
@@ -437,6 +466,9 @@ ul li:hover .down-ul {
 .clients-arrow:hover, .arrow-left:hover, .arrow-right:hover, .more:hover::after {
     color: #fff;
     background: #6CB43F;
+}
+#arrowLeft, #arrowRight {
+    outline: none;
 }
 .line {
     border-bottom: 3px solid #E1E1E1;
@@ -465,6 +497,9 @@ footer::before {
     right: 0;
     height: 300px;
     z-index: -1;
+}
+.footerlocation:hover, .footertelefon:hover, .footermail:hover  {
+    animation: shake 0.9s ease;
 }
 .map {
     width: 628px;
@@ -518,6 +553,11 @@ footer img, .social svg  {
     color: #6CB43F;
     cursor: pointer;
     font-family: firago-bold;
+    transition: 0.5s ease;
+}
+.smartweb:hover {
+    font-size: 15px;
+    transition: 0.5s ease;
 }
 
 
@@ -626,7 +666,7 @@ footer img, .social svg  {
 /*      contact page 3      */
 
 .send-message {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -647,6 +687,8 @@ footer img, .social svg  {
     background: #F5FAF1;
     margin-bottom: 15px;
     border: 1px solid #6CB43F;
+    display: none;
+    animation: fadeIn .5s forwards;
 }
 .success span {
     color: #6CB43F;
@@ -657,6 +699,8 @@ footer img, .social svg  {
     background: #FAF1F1;
     border: 1px solid #B43F3F;
     margin-bottom: 40px;
+    display: none;
+    animation: fadeIn .5s forwards;
 }
 .unsuccess span {
     color: #B43F3F;
@@ -684,6 +728,15 @@ footer img, .social svg  {
     flex-direction: row;
     align-items: center;
     text-align: left;
+    cursor: pointer;
+}
+.contactnm a, .contactem a {
+    font-size: 15px;
+    font-family: firago-medium;
+    color: #798296;
+}
+.contactem:hover, .contactnm:hover, .contactlc:hover {
+    animation: shake 0.8s;
 }
 .contact-info {
     display: flex;
@@ -728,6 +781,11 @@ footer img, .social svg  {
     border: 0;
     margin: 0 2px 15px 2px;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 textarea {
     width: 100%;
     border-radius: 5px;
@@ -744,6 +802,7 @@ textarea {
     font-size: 18px;
     transition: 0.3s ease;
     border-radius: 5px;
+    outline: none;
 }
 .submit:hover {
     color: #6CB43F;
@@ -893,16 +952,23 @@ textarea {
     font-size: 13px;
     font-family: firago-regular;
     color: gray;
+    transition: 0.5s ease;
 }
 .product-title p:hover {
     color: #6CB43F;
     font-size: 14px;
+    transition: 0.5s ease;
+}
+.productBox {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
 }
 .product-grid {
     display: grid;
     grid-template-columns: auto auto auto;
     text-align: center;
-    width: 75%;
+    width: 100%;
     grid-gap: 20px;
 }
 .product-grid div {
@@ -915,6 +981,10 @@ textarea {
 }
 .product-grid div:hover .line {
     border-color: #6CB43F;
+}
+.selected {
+    color: #6CB43F !important;
+    font-size: 15px !important;
 }
 .product-grid img {
     width: 164px;
@@ -930,12 +1000,16 @@ textarea {
     font-family: firago-regular;
     font-weight: normal;
 }
+.building, .newYearLamp {
+    display: none;
+}
 .pagenation {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-evenly !important;
-    border: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border: none;
     font-family: firago-bold;
+    margin-top: 29px;
 }
 .pagenation a {
     width: 30px;
@@ -946,6 +1020,7 @@ textarea {
     align-items: center;
     border-radius: 4px;
     color: #181818;
+    margin: 0 8px;
 }
 .active {
     background: #6CB43F;
@@ -1198,12 +1273,6 @@ textarea {
         font-family: firago-medium;
         color: #798296;
     }
-    .client2, .client3, .client4{
-        display: none !important;
-    }
-    .clients-list li {
-        width: 100%;
-    }
     footer {
         flex-direction: column;
         height: 563px;
@@ -1237,6 +1306,7 @@ textarea {
     }
     .bysmart {
         width: 300px;
+        color: #949CAB;
     }
     .social-logo {
         justify-content: flex-start;
@@ -1278,7 +1348,6 @@ textarea {
     .product-grid {
         grid-template-columns: auto;
         margin-left: 0px;
-        width: 100%;
     }
     .product {
         flex-direction: column;
@@ -1420,12 +1489,6 @@ textarea {
         font-size: 14px;
 
     }
-    .client2{
-        display: flex !important;
-    }
-    .clients-list li {
-        width: calc(100% / 2);
-    }
 
     /* About As  */
     .page-title {
@@ -1441,7 +1504,6 @@ textarea {
      .product-grid {
         grid-template-columns: auto;
         margin-left: 10px;
-        width: 75%;
     }
     .product {
         flex-direction: row;
@@ -1526,12 +1588,6 @@ textarea {
     }
     .ask-p p {
         padding-left: 80px;
-    }
-    .client3{
-        display: flex !important;
-    }
-    .clients-list li {
-        width: calc(100% / 3);
     }
     footer {
         flex-direction: row;
@@ -1726,12 +1782,6 @@ textarea {
     }
     .clients::before {
         display: block;
-    }
-    .client4{
-        display: flex !important;
-    }
-    .clients-list li {
-        width: calc(100% / 4)
     }
     
     /*    inproduct page 8     */

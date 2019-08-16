@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>მთავარი გვერდი</title>
 </head>
@@ -96,36 +97,48 @@
         </div>
         <section class="clients">
             <h1>კლიენტები</h1>
-            <ul class="clients-list">
-                <li class="client1">
-                   <a href="#"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/smart web.png" alt="Logo"></a>
+            <div class="sliderBox">
+            <ul id="clientsUl" class="clients-list">
+                <li>
+                   <a href="https://www.smartweb.ge/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/smartweb.png" alt="Logo"></a>
                    <span class="line"></span>
-                   <a href="#">Smartweb</a>
+                   <a href="https://www.smartweb.ge/" target="_blank">Smartweb</a>
                 </li>
-                <li class="client2">
-                    <a href="#"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/cola.png" alt="Logo"></a>
+                <li>
+                    <a href="https://www.coca-cola.com/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/cola.png" alt="Logo"></a>
                     <span class="line"></span>
-                    <a href="#">Coca-cola</a>
+                    <a href="https://www.coca-cola.com/" target="_blank">Coca-cola</a>
                 </li>
-                <li class="client3">
-                    <a href="#"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/nike.png" alt="Logo"></a>
+                <li>
+                    <a href="https://www.nike.com/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/nike.png" alt="Logo"></a>
                     <span class="line"></span>
-                    <a href="#">Nike</a>
+                    <a href="https://www.nike.com/" target="_blank">Nike</a>
                 </li>
-                <li class="client4">
-                    <a href="#"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/smart web.png" alt="Logo"></a>
+                <li>
+                    <a href="https://www.smartweb.ge/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/smartweb.png" alt="Logo"></a>
                     <span class="line"></span>
-                    <a href="#">Smartweb</a>
+                    <a href="https://www.smartweb.ge/" target="_blank">Smartweb</a>
+                </li>
+                <li>
+                    <a href="https://www.coca-cola.com/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/cola.png" alt="Logo"></a>
+                    <span class="line"></span>
+                    <a href="https://www.coca-cola.com/" target="_blank">Coca-cola</a>
+                </li>
+                <li>
+                    <a href="https://www.nike.com/" target="_blank"><img class="lazy" src="media/img/cover.jpeg" data-src="media/img/nike.png" alt="Logo"></a>
+                    <span class="line"></span>
+                    <a href="https://www.nike.com/" target="_blank">Nike</a>
                 </li>
             </ul>
-            <span><span class="clients-arrow">&lt;</span><span class="clients-arrow">&gt;</span></span>
+        </div>
+            <span><span onclick="moveLeft()" id="arrowLeft" class="clients-arrow">&lt;</span><span onclick="moveRight()" id="arrowRight" class="clients-arrow">&gt;</span></span>
         </section>
         <footer>
-               <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.3425027509734!2d44.785498414810334!3d41.756272781009336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446d7e289459cf%3A0x359947bd9c906eb3!2zR3VyYW1pc2h2aWxpIEF2ZSwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1559831705541!5m2!1ska!2sge" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+               <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.567636538442!2d44.79211541480848!3d41.708268584005125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd83f3a0ca1%3A0xe29bd8a83515f41d!2s5+Kote+Marjanishvili+St%2C+T&#39bilisi!5e0!3m2!1sen!2sge!4v1565623223204!5m2!1sen!2sge" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
                 <div class="address">
-                    <div class="addressLogo"><img src="media/img/Path 97.png" alt="location"> <p>ქ. თბილისი, მარჯანიშვილის 5</p></div> 
-                    <div class="addressLogo"><img src="media/img/Path 25.png" alt="phone"> <p>+995 558 49-99-69</p></div> 
-                    <div class="addressLogo"><img src="media/img/phone-receiver (1).png" alt="email"> <p>info@ncce.ge</p></div> 
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.567636538442!2d44.79211541480848!3d41.708268584005125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd83f3a0ca1%3A0xe29bd8a83515f41d!2s5+Kote+Marjanishvili+St%2C+T&#39bilisi!5e0!3m2!1sen!2sge!4v1565623223204!5m2!1sen!2sge" target="_blank" class="addressLogo footerlocation"><img src="media/img/Path 97.png" alt="location"> <p>ქ. თბილისი, მარჯანიშვილის 5</p></a> 
+                    <a href="tel:+995-558-49-99-69" class="addressLogo footertelefon"><img src="media/img/Path 25.png" alt="phone"> <p>+995 558 49-99-69</p></a> 
+                    <a href="mailto:info@ncce.ge" class="addressLogo footermail"><img src="media/img/phone-receiver (1).png" alt="email"> <p>info@ncce.ge</p></a> 
                 </div>
                 <div class="social">
                     <div class="social-icon">
@@ -146,7 +159,7 @@
                                 </g></svg>
                             </a>
                         </div>
-                        <p class="bysmart">Created By <span class="smartweb">Smartweb</span></p>
+                        <a href="https://www.smartweb.ge/" target="_blank" class="bysmart">Created By <span class="smartweb">Smartweb</span></a>
                     </div>
                 </div>
         </footer>

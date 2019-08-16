@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>კონტაქტი</title>
 </head>
@@ -15,10 +16,10 @@
                 <li><a href="aboutAs.html">ჩვენ შესახებ</a></li>
                 <li><a class="arrow" href="product.html">პროდუქცია</a>
                     <ul class="dropDown">
-                        <li><a href="#">კატეგორია</a></li>
-                        <li><a href="#">კატეგორია</a></li>
-                        <li><a href="#">კატეგორია</a></li>
-                        <li><a href="#">კატეგორია</a></li>
+                        <li><a href="#!">კატეგორია</a></li>
+                        <li><a href="#!">კატეგორია</a></li>
+                        <li><a href="#!">კატეგორია</a></li>
+                        <li><a href="#!">კატეგორია</a></li>
                     </ul>
                 </li>
                 <li><a href="service.html">სერვისები</a></li>
@@ -29,9 +30,9 @@
                     </ul>
                 </li>
                 <li><a href="clients.html">კლიენტები</a></li>
-                <li><a href="#">თანამშრომლები</a></li>
+                <li><a href="#!">თანამშრომლები</a></li>
                 <li><a href="contact.html">კონტაქტი</a></li>
-                <li><a href="#">სერტიფიკატები</a></li>
+                <li><a href="#!">სერტიფიკატები</a></li>
             </ul>
         </nav>
         <img class="search" src="assets/media/img/search.png" alt="search"></a>
@@ -67,9 +68,9 @@
                         </ul>
                     </li>
                     <li><a href="clients.html">კლიენტები</a></li>
-                    <li><a href="#">თანამშრომლები</a></li>
+                    <li><a href="#!">თანამშრომლები</a></li>
                     <li><a href="contact.html">კონტაქტი</a></li>
-                    <li><a href="#">სერტიფიკატები</a></li>
+                    <li><a href="#!">სერტიფიკატები</a></li>
                 </ul>
         </div>
     <!--  end   open navigation by burger      -->
@@ -81,44 +82,46 @@
         </div>
     </div>
     <div id="send-message" class="send-message">
-        <div id="hide" class="sent success"><p>შეტყობინება <strong> წარმატებით </strong> გაიგზავნა</p><span onclick="document.getElementById('hide').style.display='none'" > &times; </span></div>
-        <div id="hide-unsucces" class="sent unsuccess"><p>შეტყობინება <strong> წარმატებით </strong> გაიგზავნა</p><span onclick="document.getElementById('hide-unsucces').style.display='none'" > &times; </span></div>
+        <div id="hide" class="sent success"><p>შეტყობინება <strong> წარმატებით </strong> გაიგზავნა</p><span onclick="deleteForm()" class="close" > &times; </span></div>
+        <div id="hide-unsucces" class="sent unsuccess "><p>შეტყობინება <strong> წარმატებით </strong> გაიგზავნა</p><span onclick="deleteForm()" class="close"  > &times; </span></div>
     </div>
     <div class="contact">
         <div class="map-2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.3425027509734!2d44.785498414810334!3d41.756272781009336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446d7e289459cf%3A0x359947bd9c906eb3!2zR3VyYW1pc2h2aWxpIEF2ZSwg4YOX4YOR4YOY4YOa4YOY4YOh4YOY!5e0!3m2!1ska!2sge!4v1559899067124!5m2!1ska!2sge" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
         <div class="contact-left">
             <div class="contact-info">
-                <div class="contact-sm">
+                <div class="contact-sm contactem">
                     <img src="media/img/email.png" alt="Email">
                     <div>
                         <p class="contact-by" >ელ.ფოსტა</p>
-                        <p class="contact-to">Info@Termohub.ge</p>
+                        <p class="contact-to"><a href="mailto:Info@Termohub.ge">Info@Termohub.ge</a></p>
                     </div>
                 </div>
-                <div class="contact-sm">
+                <div class="contact-sm contactnm">
                     <img src="media/img/Icon.png" alt="phone">
                     <div>
                         <p class="contact-by">ტელეფონი</p>
-                        <p class="contact-to">+995 558 49-99-69</p>
+                        <p class="contact-to"><a href="tel:+995-558-49-99-69">+995 558 49-99-69</a> </p>
                     </div>
                 </div>
-                <div class="contact-sm">
-                    <img src="media/img/location.png" alt="location">
+                <div class="contact-sm contactlc">
+                   <div><img src="media/img/location.png" alt="location"> </div>
                     <div>
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.120890565399!2d44.70423591480808!3d41.69632588474996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404474bd9c3e2197%3A0xcd229ef80bf7e8cb!2s124+Leselidze+St%2C+Tskneti!5e0!3m2!1sen!2sge!4v1565517407704!5m2!1sen!2sge" target="blank" >
                         <p class="contact-by">მისამართი</p>
                         <p class="contact-to">Leselidze St#124</p>
+                    </a>
                     </div>
                 </div>
             </div>
             <p class="notification">მოგვწერეთ შეტყობინება</p>
-            <form class="form" action="#">
-                <input type="text" placeholder="თქვენი სახელი">
-                <input type="email" placeholder="ელ. ფოსტა">
-                <input type="text" placeholder="ტელეფონის ნომერი">
-                <input type="text" placeholder="თემის სათაური">
-                <textarea cols="30" rows="2" placeholder="შეტყობინება"></textarea>
-                <button onclick="document.getElementById('send-message').style.display='flex'" class="submit">გაგზავნა</button>
+            <form class="form" action="#!">
+                <input onkeyup="checkName()" id="inputName" type="text" placeholder="თქვენი სახელი">
+                <input onkeyup="checkEmail()" id="inputEmail"  type="email" placeholder="ელ. ფოსტა">
+                <input id="inputNumber"  type="number" placeholder="ტელეფონის ნომერი">
+                <input onkeyup="checkSubject()" id="inputSubject"  type="text" placeholder="თემის სათაური">
+                <textarea onkeyup="checkMessage()" id="inputMessage"  cols="30" rows="2" placeholder="შეტყობინება"></textarea>
             </form>
+             <button onclick="checkFromBySend()" id="submit" class="submit">გაგზავნა</button>
         </div>
     </div>
     <footer>
